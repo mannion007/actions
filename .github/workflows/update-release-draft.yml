@@ -1,9 +1,8 @@
 name: Update Release Draft
-
 on:
   push:
     branches:
-      - $default-branch
+      - 'master'
 
 jobs:
   update_release_draft:
