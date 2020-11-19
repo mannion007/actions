@@ -2,11 +2,6 @@ name: Label Pull Request
 on:
   pull_request:
     types: [opened]
-  push:
-    branches:
-      - 'feature/**'
-      - 'hotfix/**'
-      - 'chore/**'
 
 jobs:
   pr-labeler:
