@@ -20,8 +20,6 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ github.token }}
-          #commit-message: Automated merge of master into staging
-          #delete-branch: true
-          #base: master
+          delete-branch: true
           branch: sync-staging
-          title: '[automated] Merge Master back to Staging'
+          title: 're-sync staging with master'
