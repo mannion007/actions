@@ -13,7 +13,9 @@ jobs:
           ref: staging
 
       - name: Reset staging branch
-        run: git merge master
+        run: |
+          git fetch origin master:master
+          git merge master
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
