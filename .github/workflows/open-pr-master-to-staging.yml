@@ -15,7 +15,7 @@ jobs:
         with:
           token: ${{ github.token }}
           commit-message: Automated merge of master into staging
-          delete-branch: true
+          #delete-branch: true
           base: staging
           branch: master
           title: '[automated] Merge Master back to Staging'
