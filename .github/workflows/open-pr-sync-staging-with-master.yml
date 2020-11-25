@@ -1,4 +1,4 @@
-name: Sync staging to master
+name: PR to sync staging with master
 on:
   push:
     branches:
