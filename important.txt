@@ -5,15 +5,3 @@ refactored
 
 test
 
-
-some hotfix
-
-some other hotfix
-
-
-test
-
-
-another hotfix
-
-some change
