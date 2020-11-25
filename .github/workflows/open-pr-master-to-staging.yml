@@ -1,0 +1,21 @@
+name: Sync staging to master
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create Pull Request for master -> staging
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ github.token }}
+          commit-message: Automated merge of master into staging
+          delete-branch: true
+          base: staging
+          branch: master
+          title: '[automated] Merge Master back to Staging'
