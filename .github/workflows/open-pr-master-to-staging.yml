@@ -9,13 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: staging
 
-      - name: Create Pull Request for master -> staging
+      - name: Reset staging
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ github.token }}
           commit-message: Automated merge of master into staging
-          #delete-branch: true
-          base: master
-          branch: staging
+          delete-branch: true
+          #base: master
+          branch: sync-staging
           title: '[automated] Merge Master back to Staging'
